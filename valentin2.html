@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Для моей принцессы 💗</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      height:100vh;
+      background:linear-gradient(135deg,#ff9a9e 0%,#fecfef 50%,#fad0c4 100%);
+      font-family:'Segoe UI',system-ui,sans-serif;
+      color:#fff;
+      overflow:hidden;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+    body::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at 20% 30%,rgba(255,105,180,0.18) 0%,transparent 40%),
+                 radial-gradient(circle at 80% 70%,rgba(255,20,147,0.15) 0%,transparent 50%);
+      pointer-events:none;
+      z-index:1;
+    }
+    .container{
+      position:relative;
+      z-index:10;
+      padding:30px;
+      max-width:95%;
+    }
+    h1{
+      font-size:4.5rem;
+      line-height:1.1;
+      text-shadow:0 0 30px rgba(255,20,147,0.9),0 0 60px rgba(255,105,180,0.7);
+      margin-bottom:1.5rem;
+      background:linear-gradient(90deg,#ff69b4,#ff1493,#c71585,#ff69b4);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-size:300% 300%;
+      animation:gradient 6s ease infinite;
+    }
+    p{
+      font-size:2.4rem;
+      line-height:1.4;
+      margin:1.2rem 0;
+      text-shadow:0 4px 25px rgba(0,0,0,0.6);
+    }
+    .heart-emoji{
+      font-size:4.5rem;
+      margin:0 15px;
+      animation:beat 1.5s infinite;
+    }
+    .btn{
+      margin-top:2.5rem;
+      padding:1.2rem 3rem;
+      font-size:2rem;
+      font-weight:bold;
+      color:#fff;
+      background:linear-gradient(45deg,#ff1493,#ff69b4);
+      border:none;
+      border-radius:50px;
+      cursor:pointer;
+      box-shadow:0 10px 30px rgba(255,20,147,0.5);
+      transition:all 0.3s;
+    }
+    .btn:hover{
+      transform:scale(1.08);
+      box-shadow:0 15px 40px rgba(255,20,147,0.7);
+    }
+    #hidden{
+      display:none;
+      margin-top:2rem;
+    }
+    #hidden.show{
+      display:block;
+      animation:fadeIn 1.2s ease-in;
+    }
+    .photo{
+      width:280px;
+      height:280px;
+      object-fit:cover;
+      border-radius:20px;
+      margin:1.5rem auto;
+      display:block;
+      box-shadow:0 0 50px rgba(255,20,147,0.8),inset 0 0 25px rgba(255,255,255,0.3);
+      border:6px solid rgba(255,255,255,0.4);
+    }
+    .small-text{
+      font-size:1.8rem;
+      opacity:0.95;
+      margin-top:1rem;
+    }
+    .hearts{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:5;
+      overflow:hidden;
+    }
+    .heart{
+      position:absolute;
+      color:#ff3366;
+      font-size:1.6rem;
+      top:-15%;
+      animation:fall linear infinite;
+      opacity:0.9;
+      text-shadow:0 0 12px rgba(255,51,102,0.8);
+    }
+    @keyframes fall{
+      0%{transform:translateY(-15vh) rotate(0deg) translateX(0)}
+      100%{transform:translateY(120vh) rotate(720deg) translateX(40px)}
+    }
+    @keyframes beat{
+      0%,100%{transform:scale(1)}
+      40%{transform:scale(1.4)}
+    }
+    @keyframes gradient{
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    @keyframes fadeIn{
+      from{opacity:0; transform:translateY(20px)}
+      to{opacity:1; transform:translateY(0)}
+    }
+    .heart:nth-child(odd){color:#ff1493}
+    .heart:nth-child(3n){font-size:2rem;opacity:0.75}
+    .heart:nth-child(1){left:10%;animation-duration:9s;animation-delay:0s}
+    .heart:nth-child(2){left:25%;animation-duration:12s;animation-delay:1s}
+    .heart:nth-child(3){left:40%;animation-duration:10s;animation-delay:2.5s}
+    .heart:nth-child(4){left:55%;animation-duration:11s;animation-delay:0.7s}
+    .heart:nth-child(5){left:70%;animation-duration:13s;animation-delay:3.8s}
+    .heart:nth-child(6){left:85%;animation-duration:8s;animation-delay:1.5s}
+    .heart:nth-child(7){left:15%;animation-duration:14s;animation-delay:4s}
+    .
+heart:nth-child(8){left:35%;animation-duration:10.5s;animation-delay:2.2s}
+    .heart:nth-child(9){left:60%;animation-duration:9s;animation-delay:5.5s}
+    .heart:nth-child(10){left:80%;animation-duration:11.5s;animation-delay:0.3s}
+  </style>
+</head>
+<body>
+
+  <div class="hearts">
+    <div class="heart">❤️</div>
+    <div class="heart">💗</div>
+    <div class="heart">💖</div>
+    <div class="heart">💘</div>
+    <div class="heart">💕</div>
+    <div class="heart">❤️</div>
+    <div class="heart">💞</div>
+    <div class="heart">💓</div>
+    <div class="heart">💝</div>
+    <div class="heart">❤️</div>
+  </div>
+
+  <div class="container">
+    <h1>Я тебя люблю,</h1>
+    <p>моя принцесса <span class="heart-emoji">💖</span></p>
+
+    <button class="btn" onclick="document.getElementById('hidden').classList.add('show'); this.style.display='none';">
+      Нажми сюда 💕
+    </button>
+
+    <div id="hidden">
+      <img 
+        class="photo" 
+        src="https://s10.aconvert.com/convert/p3r68-cdx67/amhap-zs4su.png" 
+        alt="Наше фото"
+      >
+      <p class="small-text">Уже 5 лет я выбираю тебя каждый день…<br>и это лучшее, что со мной случалось ❤️</p>
+    </div>
+  </div>
+
+</body>
+</html>
